@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="form.UserInfoView">
+   <children>
+      <AnchorPane layoutX="58.0" layoutY="51.0" prefHeight="723.0" prefWidth="971.0">
+         <children>
+            <Label fx:id="email" layoutX="419.0" layoutY="246.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="username" layoutX="419.0" layoutY="193.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="90.0" layoutY="125.0">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="373.0" layoutY="28.0" style="-fx-font-weight: bold;" text="使用者資料">
+               <font>
+                  <Font name="Microsoft JhengHei" size="45.0" />
+               </font>
+            </Label>
+            <Label layoutX="305.0" layoutY="193.0" text="Username：">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="345.0" layoutY="246.0" text="Email：">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="iconPane" layoutY="52.0" prefHeight="716.0" prefWidth="56.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/homeicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userinfoIcon" fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/usericon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="powerbankIcon" fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/energyicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logouticon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="buttonPane" layoutX="56.0" layoutY="52.0" prefHeight="711.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="716.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <JFXButton fx:id="mainButton" buttonType="RAISED" onMouseClicked="#changeToMainView" prefHeight="66.0" prefWidth="200.0" styleClass="button1" stylesheets="@../css/stylesheet.css" text="Main" />
+                  <JFXButton fx:id="userinfoButton" buttonType="RAISED" prefHeight="66.0" prefWidth="200.0" styleClass="button2" stylesheets="@../css/stylesheet.css" text="Userinfo" />
+                  <JFXButton fx:id="powerbankButton" buttonType="RAISED" onMouseClicked="#changeToPowerbankView" prefHeight="66.0" prefWidth="200.0" styleClass="button2" stylesheets="@../css/stylesheet.css" text="Powebank" />
+                  <JFXButton fx:id="logoutButton" buttonType="RAISED" onMouseClicked="#logout" prefHeight="66.0" prefWidth="200.0" styleClass="button2" stylesheets="@../css/stylesheet.css" text="Logout" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="55.0" prefWidth="1034.0" style="-fx-background-color: #6f20c9;">
+         <children>
+            <ImageView fx:id="menuButton" fitHeight="46.0" fitWidth="46.0" layoutX="14.0" layoutY="5.0">
+               <image>
+                  <Image url="@../images/menuicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="minimizeButton" fitHeight="36.0" fitWidth="36.0" layoutX="942.0" layoutY="10.0" onMouseClicked="#minimize">
+               <image>
+                  <Image url="@../images/whiteMinimizeicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="closeButton" fitHeight="36.0" fitWidth="36.0" layoutX="984.0" layoutY="10.0" onMouseClicked="#close">
+               <image>
+                  <Image url="@../images/whitecloseicon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="form.AdminView">
+   <children>
+      <AnchorPane layoutX="-5.0" layoutY="51.0" prefHeight="723.0" prefWidth="1034.0">
+         <children>
+            <ImageView fx:id="img1" fitHeight="103.0" fitWidth="98.0" layoutX="130.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/power-bankicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img2" fitHeight="103.0" fitWidth="98.0" layoutX="130.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/power-bankicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img3" fitHeight="103.0" fitWidth="98.0" layoutX="130.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/power-bankicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img4" fitHeight="103.0" fitWidth="98.0" layoutX="538.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/power-bankicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img5" fitHeight="103.0" fitWidth="98.0" layoutX="538.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/power-bankicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="img6" fitHeight="103.0" fitWidth="98.0" layoutX="538.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/power-bankicon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="label1" layoutX="260.0" layoutY="94.0" text="借用中">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="label2" layoutX="260.0" layoutY="277.0" text="借用中">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="label3" layoutX="260.0" layoutY="466.0" text="借用中">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="label4" layoutX="672.0" layoutY="94.0" text="借用中">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="label5" layoutX="672.0" layoutY="277.0" text="借用中">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="label6" layoutX="672.0" layoutY="466.0" text="借用中">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <ToggleButton fx:id="changeFormat" layoutX="895.0" layoutY="26.0" mnemonicParsing="false" text="Formatting" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="55.0" prefWidth="1034.0" style="-fx-background-color: #6f20c9;">
+         <children>
+            <ImageView fx:id="closeButton" fitHeight="36.0" fitWidth="36.0" layoutX="984.0" layoutY="10.0" onMouseClicked="#close">
+               <image>
+                  <Image url="@../images/whitecloseicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="minimizeButton" fitHeight="36.0" fitWidth="36.0" layoutX="942.0" layoutY="10.0" onMouseClicked="#minimize">
+               <image>
+                  <Image url="@../images/whiteMinimizeicon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

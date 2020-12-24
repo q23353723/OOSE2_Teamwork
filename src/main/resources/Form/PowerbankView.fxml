@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="form.PowerbankView">
+   <children>
+      <AnchorPane layoutX="52.0" layoutY="49.0" prefHeight="724.0" prefWidth="977.0">
+         <children>
+            <Circle fill="WHITE" layoutX="178.0" layoutY="252.0" radius="110.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="103.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/power-bankicon.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="409.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="電池資訊">
+               <font>
+                  <Font name="Microsoft JhengHei" size="40.0" />
+               </font>
+            </Text>
+            <Text layoutX="309.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="電量">
+               <font>
+                  <Font name="Microsoft JhengHei" size="40.0" />
+               </font>
+            </Text>
+            <Label fx:id="capacity" layoutX="621.0" layoutY="275.0" text="Label">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="34.0" />
+               </font></Label>
+            <JFXProgressBar fx:id="capacityBar" layoutX="404.0" layoutY="288.0" prefHeight="22.0" progress="1.0" />
+            <Label fx:id="id" layoutX="404.0" layoutY="189.0" text="Label">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="34.0" />
+               </font>
+            </Label>
+            <Text layoutX="309.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="編號">
+               <font>
+                  <Font name="Microsoft JhengHei" size="40.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <AnchorPane fx:id="iconPane" layoutY="52.0" prefHeight="716.0" prefWidth="56.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/homeicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/usericon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/energyicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logouticon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="buttonPane" layoutX="56.0" layoutY="52.0" prefHeight="711.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="716.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <JFXButton fx:id="mainButton" buttonType="RAISED" onMouseClicked="#changeToMainView" prefHeight="66.0" prefWidth="200.0" styleClass="button1" stylesheets="@../css/stylesheet.css" text="Main" />
+                  <JFXButton fx:id="userinfoButton" buttonType="RAISED" onMouseClicked="#changeToUserInfoView" prefHeight="66.0" prefWidth="200.0" styleClass="button2" stylesheets="@../css/stylesheet.css" text="Userinfo" />
+                  <JFXButton fx:id="powerbankButton" buttonType="RAISED" prefHeight="66.0" prefWidth="200.0" styleClass="button2" stylesheets="@../css/stylesheet.css" text="Powebank" />
+                  <JFXButton fx:id="logoutButton" buttonType="RAISED" onMouseClicked="#logout" prefHeight="66.0" prefWidth="200.0" styleClass="button2" stylesheets="@../css/stylesheet.css" text="Logout" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="55.0" prefWidth="1034.0" style="-fx-background-color: #6f20c9;">
+         <children>
+            <ImageView fx:id="menuButton" fitHeight="46.0" fitWidth="46.0" layoutX="14.0" layoutY="5.0">
+               <image>
+                  <Image url="@../images/menuicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="closeButton" fitHeight="36.0" fitWidth="36.0" layoutX="984.0" layoutY="10.0" onMouseClicked="#close">
+               <image>
+                  <Image url="@../images/whitecloseicon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="minimizeButton" fitHeight="36.0" fitWidth="36.0" layoutX="942.0" layoutY="10.0" onMouseClicked="#minimize">
+               <image>
+                  <Image url="@../images/whiteMinimizeicon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
