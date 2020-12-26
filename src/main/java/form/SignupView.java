@@ -36,7 +36,11 @@ public class SignupView implements FxmlView<SignupViewModel> {
     }
 
     //切換畫面
-    public void register() { viewModel.register(); }
+    public void register() {
+        if(viewModel.register()) {
+            ViewManager.getInstance().setRoot("LoginView");
+        }
+    }
     public void back() {
         ViewManager.getInstance().setRoot("LoginView");
     }

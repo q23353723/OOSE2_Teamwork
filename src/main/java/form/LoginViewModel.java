@@ -1,6 +1,7 @@
 package form;
 
 import de.saxsys.mvvmfx.ViewModel;
+import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
@@ -64,16 +65,20 @@ public class LoginViewModel implements ViewModel {
             }
             else {
                 //如果密碼錯誤
-                Alert alert = new Alert(Alert.AlertType.ERROR, "帳號或密碼錯誤");
-                alert.setTitle("錯誤");
-                alert.show();
+                Platform.runLater(() -> {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "帳號或密碼錯誤");
+                    alert.setTitle("錯誤");
+                    alert.show();
+                });
                 return false;
             }
         } catch (Exception e) {
             //如果資料庫中沒有取到這個username的user
-            Alert alert = new Alert(Alert.AlertType.ERROR, "帳號不存在");
-            alert.setTitle("帳號錯誤");
-            alert.show();
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "帳號不存在");
+                alert.setTitle("帳號錯誤");
+                alert.show();
+            });
             return false;
         }
     }
@@ -90,16 +95,20 @@ public class LoginViewModel implements ViewModel {
                 return true;
             } else {
                 //如果密碼錯誤
-                Alert alert = new Alert(Alert.AlertType.ERROR, "帳號或密碼錯誤");
-                alert.setTitle("錯誤");
-                alert.show();
+                Platform.runLater(() -> {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "帳號或密碼錯誤");
+                    alert.setTitle("錯誤");
+                    alert.show();
+                });
                 return false;
             }
         } catch (Exception e) {
             //如果沒取到資料
-            Alert alert = new Alert(Alert.AlertType.ERROR, "帳號不存在");
-            alert.setTitle("帳號錯誤");
-            alert.show();
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "帳號不存在");
+                alert.setTitle("帳號錯誤");
+                alert.show();
+            });
             return false;
         }
     }

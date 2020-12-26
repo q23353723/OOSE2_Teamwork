@@ -5,90 +5,150 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="form.MainView">
    <children>
-      <AnchorPane layoutX="58.0" layoutY="51.0" prefHeight="723.0" prefWidth="971.0">
+      <ImageView fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../element/登入_工作區域 1.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="buttonPane" layoutY="1.0" prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Circle fill="WHITE" layoutX="304.0" layoutY="214.0" radius="110.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="229.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="768.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/power-bankicon.png" />
+                  <Image url="@../element/旁邊.png" />
                </image>
             </ImageView>
-            <Circle fill="WHITE" layoutX="621.0" layoutY="214.0" radius="110.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="546.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="172.0" fitWidth="186.0" layoutX="41.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="70.0">
                <image>
-                  <Image url="@../images/returnicon.png" />
+                  <Image url="@../element/小尬電 LOGO.png" />
                </image>
             </ImageView>
-            <JFXButton fx:id="borrowButton" buttonType="RAISED" layoutX="206.0" layoutY="342.0" onMouseClicked="#borrow" prefHeight="51.0" prefWidth="196.0" ripplerFill="#832e86" style="-fx-border-radius: 40; -fx-background-radius: 40; -fx-background-color: #6f20c9; -fx-font-weight: bold; -fx-font-family: Rubik; -fx-font-size: 20;" text="Borrow" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="returnButton" buttonType="RAISED" layoutX="523.0" layoutY="342.0" onMouseClicked="#turnback" prefHeight="51.0" prefWidth="196.0" ripplerFill="#832e86" style="-fx-border-radius: 40; -fx-background-radius: 40; -fx-background-color: #6f20c9; -fx-font-weight: bold; -fx-font-family: Rubik; -fx-font-size: 20;" text="Return" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </JFXButton>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="iconPane" layoutY="52.0" prefHeight="716.0" prefWidth="56.0" style="-fx-background-color: #ffffff;">
-         <children>
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="63.0" fitWidth="94.0" layoutX="83.0" layoutY="684.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/homeicon.png" />
+                  <Image url="@../element/Webp.net-gifmaker.gif" />
                </image>
             </ImageView>
-            <ImageView fx:id="userinfoIcon" fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="647.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/usericon.png" />
+                  <Image url="@../element/pbr.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/energyicon.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/logouticon.png" />
-               </image>
-            </ImageView>
-         </children></AnchorPane>
-      <AnchorPane fx:id="buttonPane" layoutX="56.0" layoutY="52.0" prefHeight="711.0" prefWidth="200.0">
-         <children>
-            <VBox prefHeight="716.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+            <VBox layoutX="79.0" layoutY="258.0" prefHeight="366.0" prefWidth="150.0">
                <children>
-                  <JFXButton fx:id="mainButton" buttonType="RAISED" prefHeight="66.0" prefWidth="200.0" styleClass="button1" stylesheets="@../css/stylesheet.css" text="Main" />
-                  <JFXButton fx:id="userinfoButton" buttonType="RAISED" onMouseClicked="#changeToUserInfoView" prefHeight="66.0" prefWidth="200.0" styleClass="button2" stylesheets="@../css/stylesheet.css" text="Userinfo" />
-                  <JFXButton fx:id="powerbankButton" buttonType="RAISED" onMouseClicked="#changeToPowerbankView" prefHeight="66.0" prefWidth="200.0" styleClass="button2" stylesheets="@../css/stylesheet.css" text="Powebank" />
-                  <JFXButton fx:id="logoutButton" buttonType="RAISED" onMouseClicked="#logout" prefHeight="66.0" prefWidth="200.0" styleClass="button2" stylesheets="@../css/stylesheet.css" text="Logout" />
+                  <AnchorPane prefHeight="102.0" prefWidth="150.0">
+                     <children>
+                        <JFXButton fx:id="mainButton" buttonType="RAISED" layoutY="29.0" prefHeight="43.0" prefWidth="150.0" ripplerFill="#ea9e05" style="-fx-background-color: f1dd44; -fx-background-radius: 40;" text="Main" textFill="#070a69">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="102.0" prefWidth="150.0">
+                     <children>
+                        <JFXButton fx:id="userinfoButton" buttonType="RAISED" layoutY="29.0" onMouseClicked="#changeToUserInfoView" prefHeight="43.0" prefWidth="150.0" ripplerFill="#ea9e05" style="-fx-background-color: f1dd44; -fx-background-radius: 40;" text="User Info" textFill="#070a69">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font></JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="102.0" prefWidth="150.0">
+                     <children>
+                        <JFXButton fx:id="powerbankButton" buttonType="RAISED" layoutY="29.0" onMouseClicked="#changeToPowerbankView" prefHeight="43.0" prefWidth="150.0" ripplerFill="#ea9e05" style="-fx-background-color: f1dd44; -fx-background-radius: 40;" text="Power Bank" textFill="#070a69">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="102.0" prefWidth="150.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutY="24.0" onMouseClicked="#logout" prefHeight="43.0" prefWidth="150.0" ripplerFill="#ea9e05" style="-fx-background-color: f1dd44; -fx-background-radius: 40;" text="Logout" textFill="#070a69">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
                </children>
             </VBox>
+            <ImageView fitHeight="71.0" fitWidth="36.0" layoutX="30.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../element/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="30.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../element/user1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="30.0" layoutY="470.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../element/power-bank.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="35.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../element/logout.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="55.0" prefWidth="1034.0" style="-fx-background-color: #6f20c9;">
+      <ImageView fitHeight="111.0" fitWidth="47.0" layoutX="949.0" layoutY="701.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../element/滾.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="166.0" fitWidth="347.0" layoutX="466.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../element/行衝.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="borrowButton" buttonType="RAISED" layoutX="408.0" layoutY="607.0" onMouseClicked="#borrow" prefHeight="43.0" prefWidth="150.0" ripplerFill="#ea9e05" style="-fx-background-color: f1dd44; -fx-background-radius: 40;" text="Borrow" textFill="#070a69">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="returnButton" buttonType="RAISED" layoutX="719.0" layoutY="607.0" onMouseClicked="#turnback" prefHeight="43.0" prefWidth="150.0" ripplerFill="#ea9e05" style="-fx-background-color: f1dd44; -fx-background-radius: 40;" text="Return" textFill="#070a69">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane prefHeight="50.0" prefWidth="1024.0">
          <children>
-            <ImageView fx:id="menuButton" fitHeight="46.0" fitWidth="46.0" layoutX="14.0" layoutY="5.0">
+            <ImageView fitHeight="150.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/menuicon.png" />
+                  <Image url="@../element/上面.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="closeButton" fitHeight="36.0" fitWidth="36.0" layoutX="984.0" layoutY="10.0" onMouseClicked="#close">
+            <ImageView fx:id="closeButton" fitHeight="37.0" fitWidth="37.0" layoutX="973.0" layoutY="7.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/whitecloseicon.png" />
+                  <Image url="@../element/X.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="minimizeButton" fitHeight="36.0" fitWidth="36.0" layoutX="942.0" layoutY="10.0" onMouseClicked="#minimize">
+            <ImageView fx:id="minimizeButton" fitHeight="37.0" fitWidth="37.0" layoutX="923.0" layoutY="7.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/whiteMinimizeicon.png" />
+                  <Image url="@../element/_.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="menuButton" fitHeight="37.0" fitWidth="37.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../element/三.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
+      <ImageView fitHeight="61.0" fitWidth="599.0" layoutX="340.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../element/rules.png" />
+         </image></ImageView>
+      <ImageView fitHeight="209.0" fitWidth="668.0" layoutX="305.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../element/10.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

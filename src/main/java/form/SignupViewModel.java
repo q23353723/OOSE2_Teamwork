@@ -1,11 +1,13 @@
 package form;
 
 import de.saxsys.mvvmfx.ViewModel;
+import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.scene.control.Alert;
 import main.*;
 import model.User;
 
@@ -47,13 +49,33 @@ public class SignupViewModel implements ViewModel {
     }
 
     //註冊
-    public void register() {
-        DBManager dbm = new DBManager(new MongoDBImp());
-        //建立新的User
-        MemberFactory factory = new UserFactory();
-        User user = (User) factory.createMember();
-        user.set(username.get(), password.get(), email.get(), "");
-        //將user新增到資料庫中
-        dbm.insert(user);
+    public boolean register() {
+        try {
+            if(username.get().equals("") || password.get().equals("") || email.get().equals("")) {
+                Platform.runLater(() -> {
+                    Alert alert = new Alert(Alert.AlertType.ERROR, "欄位有空值");
+                    alert.setTitle("註冊失敗");
+                    alert.show();
+                });
+                return false;
+            }
+            else {
+                DBManager dbm = new DBManager(new MongoDBImp());
+                //建立新的User
+                MemberFactory factory = new UserFactory();
+                User user = (User) factory.createMember();
+                user.set(username.get(), password.get(), email.get(), "");
+                //將user新增到資料庫中
+                dbm.insert(user);
+                return true;
+            }
+        } catch (Exception e) {
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "Null");
+                alert.setTitle("註冊失敗");
+                alert.show();
+            });
+            return false;
+        }
     }
 }
