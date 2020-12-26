@@ -48,19 +48,14 @@ public class LoginViewModel implements ViewModel {
 
     //登入
     public boolean login() {
-        System.out.println("Pressed!");
         try {
             //從資料庫取出username == 輸入在username中的值的資料
             user = dbm.selectUser(username.get());
             //如果輸入的密碼和從資料庫中取出的user密碼相同
             if(password.get().equals(user.getPassword())) {
-                System.out.println("Login Success!");
-                System.out.println(user.getAccount());
-                System.out.println("pid:" + user.powerbankIdProperty().get());
                 //將user設定到Session中
                 Session.getInstance().setUser(user);
                 Session.getInstance().setPowerbank(dbm.getPowerbank(Session.getInstance().getUser().powerbankIdProperty().get()));
-                System.out.println(Session.getInstance().getUser().powerbankIdProperty().get().equals(""));
                 return true;
             }
             else {
@@ -90,8 +85,6 @@ public class LoginViewModel implements ViewModel {
             admin = dbm.selectAdmin(username.get());
             //如果密碼正確
             if (password.get().equals(admin.getPassword())) {
-                System.out.println("Login Success!");
-                System.out.println(admin.getAccount());
                 return true;
             } else {
                 //如果密碼錯誤

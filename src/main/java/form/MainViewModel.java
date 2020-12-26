@@ -47,9 +47,6 @@ public class MainViewModel implements ViewModel {
             dbm.update(Session.getInstance().getUser(), powerbank);
             //將Powerbank設定到Session中
             Session.getInstance().setPowerbank(powerbank);
-            System.out.println(powerbank.getId());
-            System.out.println(powerbank.getAvailable());
-            System.out.println(powerbank.getCapacity());
         } catch (Exception e) {
             //如果借用失敗
             Alert alert = new Alert(Alert.AlertType.ERROR, "沒有可借的行動電源");

@@ -29,9 +29,7 @@ public class Powerbank implements Cloneable {
         return available;
     }
 
-    public int getCapacity() {
-        return capacity;
-    }
+    public int getCapacity() { return capacity; }
 
     public StringProperty idProperty() {
         return idProperty;

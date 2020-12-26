@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="951f1170-9fd7-432f-b072-7f90f7b53d65" name="默认的" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/src/test/java/LoginViewModelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SignupViewModelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/form/LoginViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/form/LoginViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/form/SignupView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/form/SignupView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/form/SignupViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/form/SignupViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Form/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Form/LoginView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Form/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Form/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Form/PowerbankView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Form/PowerbankView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Form/SignupView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Form/SignupView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Form/UserInfoView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Form/UserInfoView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/form/MainViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/form/MainViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Powerbank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Powerbank.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,13 +79,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.OOSE2_Teamwork">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -229,7 +221,8 @@
       <workItem from="1608824443114" duration="7177000" />
       <workItem from="1608883382943" duration="6350000" />
       <workItem from="1608961508629" duration="163000" />
-      <workItem from="1608992039685" duration="6809000" />
+      <workItem from="1608992039685" duration="7141000" />
+      <workItem from="1609001084303" duration="214000" />
     </task>
     <task id="LOCAL-00001" summary="Fix">
       <created>1608961666992</created>
@@ -238,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608961666992</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix">
+      <created>1609000673984</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609000673984</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
