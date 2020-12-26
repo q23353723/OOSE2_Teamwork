@@ -2,9 +2,6 @@ package model;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import org.bson.types.ObjectId;
-
-import java.util.List;
 
 public class User extends Member {
     private StringProperty powerbankId = new SimpleStringProperty();
@@ -20,11 +17,5 @@ public class User extends Member {
 
     public void setPowerbankId(String id) {
         this.powerbankId.set(id);
-    }
-
-    public void printDetail() {
-        System.out.println("username = " + account);
-        System.out.println("password = " + password);
-        System.out.println("email = " + email);
     }
 }

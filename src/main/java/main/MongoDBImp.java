@@ -61,7 +61,6 @@ public class MongoDBImp implements DBImp {
         factory = new UserFactory();
         User user = (User) factory.createMember();
         user.set(doc.getString("username"), doc.getString("password"), doc.getString("email"), doc.getString("powerbankId"));
-        user.printDetail();
 
         return user;
     }
